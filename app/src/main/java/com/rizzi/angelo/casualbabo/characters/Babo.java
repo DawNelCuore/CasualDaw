@@ -1,11 +1,14 @@
-package com.rizzi.angelo.casualbabo;
+package com.rizzi.angelo.casualbabo.characters;
 
 import java.util.Random;
+
+import com.rizzi.angelo.casualbabo.interfaces.CharacterInterface;
 
 /**
  * Created by angelo on 04/12/15.
  */
-public class Babo {
+
+public class Babo extends CharacterInterface {
     private static String[] frasi={"Buona notte degli oscar a tutti", "Ho solo bisogno di segarmi", "Perlomeno mi considera"};
     private static String[] di={"do", "daw", "si", "fo"};
     private static  String[] inizia={"Oh", "Pronto?","Lo sapevo", "imadò" , "Sì?", "No!"};
@@ -18,6 +21,7 @@ public class Babo {
     int cas3=random.nextInt(appellativi.length);
     int cas4=random.nextInt(frasi.length);
 
+    @Override
     public String costruisciStringa(){
         String finale="";
         if(casual<1){

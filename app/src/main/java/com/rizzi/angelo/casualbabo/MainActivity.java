@@ -1,14 +1,19 @@
 package com.rizzi.angelo.casualbabo;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.rizzi.angelo.casualbabo.characters.Babo;
+import com.rizzi.angelo.casualbabo.characters.DawStani;
 
 import java.util.Random;
+
+import com.rizzi.angelo.casualbabo.characters.CharacterFactory;
 
 public class MainActivity extends Activity {
 
@@ -42,5 +47,8 @@ public class MainActivity extends Activity {
             }
         });
 
+        //Log.w("Numero classi", new CharacterFactory().getCharactersNumber()+"");
+        //Toast.makeText(this, new CharacterFactory().getNomeClassi(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, new CharacterFactory().getCount()+"", Toast.LENGTH_LONG).show();
     }
 }

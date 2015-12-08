@@ -49,6 +49,6 @@ public class MainActivity extends Activity {
 
         //Log.w("Numero classi", new CharacterFactory().getCharactersNumber()+"");
         //Toast.makeText(this, new CharacterFactory().getNomeClassi(), Toast.LENGTH_LONG).show();
-        Toast.makeText(this, new CharacterFactory().getCount()+"", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, new CharacterFactory(this).getCount()+"", Toast.LENGTH_LONG).show();
     }
 }

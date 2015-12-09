@@ -17,12 +17,20 @@ import com.rizzi.angelo.casualbabo.characters.CharacterFactory;
 import com.rizzi.angelo.casualbabo.characters.Giova1_0;
 import com.rizzi.angelo.casualbabo.characters.Ruta;
 
+import it.robertolaricchia.interfaces.CharacterInterface;
+
 public class MainActivity extends Activity {
 
+
+    private CharacterFactory factory;
+    private Random classRandom = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        factory = new CharacterFactory(MainActivity.this);
+
         setContentView(R.layout.activity_main);
         Button button= (Button)findViewById(R.id.btn1);
         final TextView textView= (TextView)findViewById(R.id.txt);
@@ -31,30 +39,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Random classRandom = new Random();
-                int crandom= classRandom.nextInt(4);
-                switch (crandom){
-                    case 0:
-                        Babo babo= new Babo();
-                        textView.setText(babo.costruisciStringa());
-                        imageView.setImageResource(babo.getImageResource());
-                        break;
-                    case 1:
-
-                        DawStani dawStani= new DawStani();
-                        textView.setText(dawStani.costruisciStringa());
-                        imageView.setImageResource(dawStani.getImageResource());
-                        break;
-                    case 2:
-                        Giova1_0 giova1_0 = new Giova1_0();
-                        textView.setText(giova1_0.costruisciStringa());
-                        imageView.setImageResource(giova1_0.getImageResource());
-                        break;
-                    case 3:
-                        Ruta ruta= new Ruta();
-                        textView.setText(ruta.costruisciStringa());
-                        imageView.setImageResource(ruta.getImageResource());
+                int crandom= classRandom.nextInt(factory.getCount());
+                try {
+                    CharacterInterface characterInterface = factory.getCharacter(crandom);
+                    textView.setText(characterInterface.costruisciStringa());
+                    imageView.setImageResource(characterInterface.getImageResource());
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
                 }
+
             }
         });
 

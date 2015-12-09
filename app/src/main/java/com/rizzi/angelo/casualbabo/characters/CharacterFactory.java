@@ -2,7 +2,7 @@ package com.rizzi.angelo.casualbabo.characters;
 
 import android.app.Activity;
 
-import com.rizzi.angelo.casualbabo.interfaces.CharacterInterface;
+import it.robertolaricchia.interfaces.CharacterInterface;
 
 import java.io.File;
 import java.io.IOException;

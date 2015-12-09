@@ -1,6 +1,6 @@
 package com.rizzi.angelo.casualbabo.characters;
 
-import com.rizzi.angelo.casualbabo.interfaces.CharacterInterface;
+import it.robertolaricchia.interfaces.CharacterInterface;
 
 
 import java.util.Random;
@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Created by angelo on 09/12/15.
  */
-public class Giova1_0 extends CharacterInterface{
+public class Giova1_0 implements CharacterInterface{
     String [] frasi={"OK fì", "Io non lo voglio il pene",  "Robbino ino ino miraccomando tienimelo","top top TOOP!"};
     String bacino = new String(Character.toChars(0x1F618));
     String baci="baci, bacini, bacetti" + bacino + bacino + bacino;

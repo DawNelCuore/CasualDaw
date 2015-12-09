@@ -2,12 +2,12 @@ package com.rizzi.angelo.casualbabo.characters;
 
 import java.util.Random;
 
-import com.rizzi.angelo.casualbabo.interfaces.CharacterInterface;
+import it.robertolaricchia.interfaces.CharacterInterface;
 
 /**
  * Created by angelo on 04/12/15.
  */
-public class DawStani extends CharacterInterface {
+public class DawStani implements CharacterInterface {
 
     private static  String[] inizia={ "Sì, però", "Bisogna vedere se.."};
     private static  String[] appellativi={"quest'anno andiamo in LegaPro", "falliamo","babo sei l'antigioia", "che schifo Antò! Metti la mano davanti al naso!", "l'Ilva chiude" };

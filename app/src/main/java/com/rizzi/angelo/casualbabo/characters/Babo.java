@@ -2,13 +2,13 @@ package com.rizzi.angelo.casualbabo.characters;
 
 import java.util.Random;
 
-import com.rizzi.angelo.casualbabo.interfaces.CharacterInterface;
+import it.robertolaricchia.interfaces.CharacterInterface;
 
 /**
  * Created by angelo on 04/12/15.
  */
 
-public class Babo extends CharacterInterface {
+public class Babo implements CharacterInterface {
     private static String[] frasi={"Buona notte degli oscar a tutti", "Ho solo bisogno di segarmi", "Perlomeno mi considera", "De gustibus"};
     private static String[] di={"do", "daw", "si", "fo"};
     private static  String[] inizia={"Oh", "Pronto?","Lo sapevo", "imadò" , "Sì?", "No!"};

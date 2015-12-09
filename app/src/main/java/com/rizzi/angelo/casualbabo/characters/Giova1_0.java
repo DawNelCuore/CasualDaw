@@ -1,5 +1,7 @@
 package com.rizzi.angelo.casualbabo.characters;
 
+import com.rizzi.angelo.casualbabo.R;
+
 import it.robertolaricchia.interfaces.CharacterInterface;
 
 
@@ -13,6 +15,8 @@ public class Giova1_0 implements CharacterInterface{
     String bacino = new String(Character.toChars(0x1F618));
     String baci="baci, bacini, bacetti" + bacino + bacino + bacino;
     Random random = new Random();
+    private static final int RESOURCE_ID = R.drawable.giova;
+
     int casual= random.nextInt(2);
     int cas1= random.nextInt(frasi.length);
 
@@ -28,5 +32,9 @@ public class Giova1_0 implements CharacterInterface{
         }
 
         return finale;
+    }
+    @Override
+    public int getImageResource() {
+        return RESOURCE_ID;
     }
 }

@@ -15,6 +15,7 @@ import java.util.Random;
 
 import com.rizzi.angelo.casualbabo.characters.CharacterFactory;
 import com.rizzi.angelo.casualbabo.characters.Giova1_0;
+import com.rizzi.angelo.casualbabo.characters.Ruta;
 
 public class MainActivity extends Activity {
 
@@ -31,26 +32,28 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 Random classRandom = new Random();
-                int crandom= classRandom.nextInt(3);
+                int crandom= classRandom.nextInt(4);
                 switch (crandom){
                     case 0:
                         Babo babo= new Babo();
                         textView.setText(babo.costruisciStringa());
-                        imageView.setImageResource(R.drawable.nicola);
+                        imageView.setImageResource(babo.getImageResource());
                         break;
                     case 1:
 
                         DawStani dawStani= new DawStani();
                         textView.setText(dawStani.costruisciStringa());
-                        imageView.setImageResource(R.drawable.daw);
+                        imageView.setImageResource(dawStani.getImageResource());
                         break;
                     case 2:
                         Giova1_0 giova1_0 = new Giova1_0();
                         textView.setText(giova1_0.costruisciStringa());
-                        imageView.setImageResource(R.drawable.giova);
+                        imageView.setImageResource(giova1_0.getImageResource());
                         break;
-                    default:textView.setText("ciaooo");
-                        break;
+                    case 3:
+                        Ruta ruta= new Ruta();
+                        textView.setText(ruta.costruisciStringa());
+                        imageView.setImageResource(ruta.getImageResource());
                 }
             }
         });

@@ -50,6 +50,8 @@ public class MainActivity extends Activity {
                         textView.setText(giova1_0.costruisciStringa());
                         imageView.setImageResource(R.drawable.giova);
                         break;
+                    default:textView.setText("ciaooo");
+                        break;
                 }
             }
         });

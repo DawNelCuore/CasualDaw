@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
 
                 Random classRandom = new Random();
                 int crandom= classRandom.nextInt(3);
-
                 switch (crandom){
                     case 0:
                         Babo babo= new Babo();

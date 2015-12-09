@@ -9,10 +9,10 @@ import com.rizzi.angelo.casualbabo.interfaces.CharacterInterface;
  */
 
 public class Babo extends CharacterInterface {
-    private static String[] frasi={"Buona notte degli oscar a tutti", "Ho solo bisogno di segarmi", "Perlomeno mi considera"};
+    private static String[] frasi={"Buona notte degli oscar a tutti", "Ho solo bisogno di segarmi", "Perlomeno mi considera", "De gustibus"};
     private static String[] di={"do", "daw", "si", "fo"};
     private static  String[] inizia={"Oh", "Pronto?","Lo sapevo", "imadò" , "Sì?", "No!"};
-    private static  String[] appellativi={"sei un coglionazzo", "sei deviato", "pensa a tua sorella","tu sei una ciola", "tu non sei normale","questo è pazzo uagnu"};
+    private static  String[] appellativi={"sei un coglionazzo", "sei deviato", "pensa a tua sorella","tu sei una ciola", "tu non sei normale","questo è pazzo uagnu", "te la sei fatta una vita?"};
 
     Random random = new Random();
     int casual= random.nextInt(2);
